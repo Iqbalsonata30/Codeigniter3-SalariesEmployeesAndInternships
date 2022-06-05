@@ -15,7 +15,6 @@ class Absensi extends CI_Controller
     $data['Judul'] = 'Sand-Box';
     $data['Absen'] = $this->M_Karyawan->AbsentKaryawan()->result_array();
     $this->load->view('Templates/header', $data);
-    $this->load->view('Absent/index', $data);
     $this->load->view('Templates/footer');
   }
 }
