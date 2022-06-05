@@ -20,9 +20,10 @@
     <div class="col-lg-5">
       <div class="card border-left-primary shadow mb-4" style="width: 25rem;height:25rem;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-          <h6 class="m-auto font-weight-bold text-dark text-lg"> Absensi</h6>
+          <h6 class="m-auto font-weight-bold text-dark text-lg"> Jam dan Tanggal</h6>
         </div>
-        <div class="card-body py-5 m-auto">
+        <div class="card-body m-auto">
+          <img src="<?= base_url('assets/img/clock-image.png'); ?>" alt="Jam" style="width:200px;display:block;margin:auto;" />
           <div class="card-text text-center text-lg font-weight-bold" style="color:black">
             <h3 id="Jamsekarang"></h3>
             <h3 id="Tanggalsekarang"></h3>
