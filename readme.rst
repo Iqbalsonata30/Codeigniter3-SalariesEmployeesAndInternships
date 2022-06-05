@@ -11,6 +11,11 @@ you creatively focus on your project by minimizing the amount of code needed
 for a given task.
 
 *******************
+Preview
+*******************
+https://github.com/Iqbalsonata30/Codeigniter3-SalariesEmployeesAndInternships/blob/dev/assets/img/Screenshot%20(204).png
+
+*******************
 Release Information
 *******************
 
