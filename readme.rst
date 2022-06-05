@@ -14,6 +14,7 @@ for a given task.
 Preview
 *******************
 https://github.com/Iqbalsonata30/Codeigniter3-SalariesEmployeesAndInternships/blob/dev/assets/img/Screenshot%20(204).png
+https://github.com/Iqbalsonata30/Codeigniter3-SalariesEmployeesAndInternships/blob/dev/assets/img/Screenshot%20(205).png?raw=true
 
 *******************
 Release Information
