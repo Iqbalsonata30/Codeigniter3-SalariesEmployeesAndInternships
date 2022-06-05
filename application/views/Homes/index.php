@@ -18,7 +18,7 @@
       </div>
     </div>
     <div class="col-lg-5">
-      <div class="card border-left-primary shadow mb-4" style="width: 25rem;height:25rem;">
+      <div class="card border-left-primary shadow mb-4" style="height:25rem;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-auto font-weight-bold text-dark text-lg"> Jam dan Tanggal</h6>
         </div>
@@ -32,9 +32,9 @@
       </div>
     </div>
   </div>
-  <div class="row justify-content-center">
-    <div class="col-lg-5">
-      <div class="card border-left-info shadow mb-4" style="width: 25rem;height:25rem;">
+  <div class="row" style="justify-content:center;">
+    <div class="col-lg-5  ">
+      <div class="card border-left-info shadow mb-4" style="height:25rem;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-auto font-weight-bold text-primary "> Jumlah Karyawan Tetap</h6>
         </div>
@@ -49,7 +49,7 @@
       </div>
     </div>
     <div class="col-lg-5">
-      <div class="card border-left-info shadow mb-4" style="width: 25rem;height:25rem;">
+      <div class="card border-left-info shadow mb-4" style="height:25rem;">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
           <h6 class="m-auto font-weight-bold text-primary">Jumlah Karyawan Magang</h6>
         </div>
