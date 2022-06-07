@@ -152,11 +152,6 @@ class M_Karyawan extends CI_Model
     return $this->db->get('karyawan_magang')->num_rows();
   }
 
-  public function DetailsEmployees()
-  {
-    return $this->db->get('detail_karyawan')->result_array();
-  }
-
   public function AbsentKaryawan()
   {
     return $this->db->get('absent');
@@ -200,5 +195,4 @@ class M_Karyawan extends CI_Model
   {
     return $this->db->get_where('user',  array('id_user' => $idUser))->row_array();
   }
-
 }

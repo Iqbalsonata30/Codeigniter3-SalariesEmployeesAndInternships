@@ -15,10 +15,21 @@ class Salaries extends CI_Controller
   {
     $data['Judul'] = 'Sand-Box - ';
     $data['SubJudul'] = 'Halaman Cetak Slip Gaji';
-    $data['Detail'] = $this->M_Karyawan->DetailsEmployees();
+    $data['Detail'] = $this->M_Karyawan->TakeEmployees();
     $data['user'] =  $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();
     $this->load->view('Templates/header', $data);
     $this->load->view('SalariesPages/detailKaryawan', $data);
+    $this->load->view('Templates/footer');
+  }
+
+  public function DataInternships()
+  {
+    $data['Judul'] = 'Sand-Box - ';
+    $data['SubJudul'] = 'Halaman Cetak Slip Gaji';
+    $data['user'] = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();
+    $data['Detail'] = $this->M_Karyawan->TakeInternships();
+    $this->load->view('Templates/header', $data);
+    $this->load->view('SalariesPages/detailInternships', $data);
     $this->load->view('Templates/footer');
   }
 }
