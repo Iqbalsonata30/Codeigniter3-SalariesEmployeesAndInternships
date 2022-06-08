@@ -93,7 +93,8 @@ class Auth extends CI_Controller
 
   public function Logout()
   {
-    $this->session->sess_destroy();
+    $this->session->unset_userdata('username');
+    $this->session->unset_userdata('role_id');
     $this->session->set_flashdata('Pesan', ' <div class="alert alert-success alert-dismissible fade show" id="RegisterSession" role="alert">
     <strong>Anda</strong> berhasil logout.</div>');
     redirect('Auth');
