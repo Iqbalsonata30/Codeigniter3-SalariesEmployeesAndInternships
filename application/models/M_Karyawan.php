@@ -195,4 +195,8 @@ class M_Karyawan extends CI_Model
   {
     return $this->db->get_where('user',  array('id_user' => $idUser))->row_array();
   }
+  public function printDataEmployees($Id)
+  {
+    return $this->db->get_where('karyawan', array('Id' => $Id))->row_array();
+  }
 }

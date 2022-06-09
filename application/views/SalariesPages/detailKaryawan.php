@@ -1,5 +1,5 @@
 <?php
-$Join = "SELECT `karyawan`.`id_Karyawan`,`Nama`,`total_hadir`
+$Join = "SELECT `karyawan`.`Id`,`karyawan`.`id_Karyawan`,`Nama`,`Jabatan`
   FROM `karyawan`
   JOIN `detail_karyawan` 
   ON `karyawan`.`id_Karyawan` = `detail_karyawan`.`id_Karyawan`";
@@ -18,7 +18,7 @@ $HasilJoin = $this->db->query($Join)->result_array();
               <th>No</th>
               <th>ID Karyawan</th>
               <th>Nama Karyawan</th>
-              <th>Total Hadir</th>
+              <th>Jabatan</th>
               <?php if ($user['role_id'] == 3) : ?>
                 <th>Opsi</th>
               <?php elseif ($user['role_id'] == 2) : ?>
@@ -33,16 +33,17 @@ $HasilJoin = $this->db->query($Join)->result_array();
                 <td><?= $i++; ?></td>
                 <td><Strong><?= $J['id_Karyawan']; ?><strong></td>
                 <td><?= $J['Nama']; ?></td>
-                <td><?= $J['total_hadir']; ?> Hari</td>
+                <td><?= $J['Jabatan']; ?> Hari</td>
                 <?php if ($user['role_id'] == 3) : ?>
-                  <td><a href="#" class="btn btn-info btn-icon-split">
-                      <span class="icon text-white-50">
-                        <i class="bi bi-printer-fill"></i>
-                      </span>
-                      <span class="text">Cetak Gaji </span>
-                    </a></td>
+                  <td>" class="btn btn-info btn-icon-split">
+                    <span class="icon text-white-50">
+                      <i class="bi bi-printer-fill"></i>
+                    </span>
+                    <span class="text">Cetak Gaji </span>
+                    </a>
+                  </td>
                 <?php elseif ($user['role_id'] == 2) : ?>
-                  <td><a href="#" class="btn btn-info btn-icon-split">
+                  <td><a href=" <?= site_url('Salaries/PrintSalariesEmployees/') . $J['Id']; ?>" class="btn btn-info btn-icon-split">
                       <span class="icon text-white-50">
                         <i class="bi bi-printer-fill"></i>
                       </span>

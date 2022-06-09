@@ -32,4 +32,13 @@ class Salaries extends CI_Controller
     $this->load->view('SalariesPages/detailInternships', $data);
     $this->load->view('Templates/footer');
   }
+
+  public function PrintSalariesEmployees($Id)
+  {
+    $data['Judul'] = 'Sand-Box - ';
+    $data['SubJudul'] = 'Cetak Gaji';
+    $data['Print'] = $this->M_Karyawan->printDataEmployees($Id);
+    $data['user'] = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();
+    $this->load->view('SalariesPages/cetakGajiKaryawan', $data);
+  }
 }

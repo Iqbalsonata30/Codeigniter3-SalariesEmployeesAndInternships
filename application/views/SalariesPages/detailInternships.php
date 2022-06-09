@@ -38,7 +38,7 @@ $HasilJoin = $this->db->query($Join)->result_array();
                 <td><?= $J['Tahun_Masuk']; ?></td>
                 <td><?= $J['total_hadir']; ?> Hari</td>
                 <?php if ($user['role_id'] == 3) : ?>
-                  <td><a href="#" class="btn btn-info btn-icon-split">
+                  <td><a href=" " class="btn btn-info btn-icon-split">
                       <span class="icon text-white-50">
                         <i class="bi bi-printer-fill"></i>
                       </span>
