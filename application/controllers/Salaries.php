@@ -41,4 +41,10 @@ class Salaries extends CI_Controller
     $data['user'] = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();
     $this->load->view('SalariesPages/cetakGajiKaryawan', $data);
   }
+  public function PrintSalariesInternships($Id)
+  {
+    $data['Print'] = $this->M_Karyawan->printDataInternships($Id);
+    $data['user'] = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();
+    $this->load->view('SalariesPages/cetakGajiMagang', $data);
+  }
 }

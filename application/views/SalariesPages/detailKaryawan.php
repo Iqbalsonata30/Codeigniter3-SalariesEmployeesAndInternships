@@ -1,10 +1,3 @@
-<?php
-$Join = "SELECT `karyawan`.`Id`,`karyawan`.`id_Karyawan`,`Nama`,`Jabatan`
-  FROM `karyawan`
-  JOIN `detail_karyawan` 
-  ON `karyawan`.`id_Karyawan` = `detail_karyawan`.`id_Karyawan`";
-$HasilJoin = $this->db->query($Join)->result_array();
-?>
 <div class="container-fluid">
   <div class="card shadow mb-4">
     <div class="card-header py-3">
@@ -28,7 +21,7 @@ $HasilJoin = $this->db->query($Join)->result_array();
           </thead>
           <tbody>
             <?php $i = 1; ?>
-            <?php foreach ($HasilJoin as $J) : ?>
+            <?php foreach ($Detail as $J) : ?>
               <tr style="color:Black;">
                 <td><?= $i++; ?></td>
                 <td><Strong><?= $J['id_Karyawan']; ?><strong></td>

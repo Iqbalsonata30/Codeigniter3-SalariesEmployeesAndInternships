@@ -57,7 +57,7 @@ class M_Karyawan extends CI_Model
     ];
     $this->db->insert('karyawan_magang', $data);
   }
-  public function deleteDataEmployees($Id_Karyawan)
+  public function deleteDataEmploydateees($Id_Karyawan)
   {
     $this->db->where('Id', $Id_Karyawan);
     $this->db->delete('karyawan');
@@ -198,5 +198,9 @@ class M_Karyawan extends CI_Model
   public function printDataEmployees($Id)
   {
     return $this->db->get_where('karyawan', array('Id' => $Id))->row_array();
+  }
+  public function printDataInternships($Id)
+  {
+    return $this->db->get_where('karyawan_magang', array('Id' => $Id))->row_array();
   }
 }
