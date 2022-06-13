@@ -11,6 +11,10 @@ class Auth extends CI_Controller
 
   public function index()
   {
+    $Access = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();
+    if ($Access) {
+      redirect('Home');
+    }
     $this->form_validation->set_rules('username', 'Username', 'trim|required');
     $this->form_validation->set_rules('password', 'Password', 'trim|required');
     if (!$this->form_validation->run() == FALSE) {
@@ -65,6 +69,10 @@ class Auth extends CI_Controller
 
   public function Registration()
   {
+    $Access = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();
+    if ($Access) {
+      redirect('Home');
+    }
     $this->form_validation->set_rules('fullname', 'Full Name', 'required');
     $this->form_validation->set_rules('username', 'Username', 'required|trim|is_unique[user.username]');
     $this->form_validation->set_rules(
