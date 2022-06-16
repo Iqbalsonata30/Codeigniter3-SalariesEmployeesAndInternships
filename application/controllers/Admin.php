@@ -6,6 +6,8 @@ class Admin extends CI_Controller
   {
     parent::__construct();
     if (!$this->session->userdata('username')) {
+      $this->session->set_flashdata('Pesan', ' <div class="alert alert-info alert-dismissible fade show" id="RegisterSession" role="alert">
+      <strong>Login</strong> terlebih dahulu .</div>');
       redirect('Auth/index');
     }
     $Access = $this->db->get_where('user', array('username' => $this->session->userdata('username')))->row_array();

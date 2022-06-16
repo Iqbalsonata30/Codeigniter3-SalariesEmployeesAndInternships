@@ -1,19 +1,3 @@
-<?php
-$Pokok = 5000000;
-$CEO = $Pokok * 25 / 100;
-$CTO = $Pokok * 20 / 100;
-$CMO = $Pokok * 15 / 100;
-$COO = $Pokok * 12 / 100;
-$CFO = $Pokok * 10 / 100;
-$Sales = $Pokok * 5 / 100;
-$PCEO = $CEO * 10 / 100;
-$PCTO = $CTO * 10 / 100;
-$PCMO = $CMO * 10 / 100;
-$PCOO = $COO * 10 / 100;
-$PCFO = $CFO * 10 / 100;
-$PSales = $Sales * 10 / 100;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -218,7 +202,7 @@ $PSales = $Sales * 10 / 100;
             <h3>Gaji Pokok</h3>
           </li>
           <li>
-            Rp <?= $Pokok; ?>
+            Rp <?= $gajiKaryawan['gajipokok']; ?>
           </li>
         </ul>
       </div>
@@ -229,17 +213,17 @@ $PSales = $Sales * 10 / 100;
           </li>
           <li>
             <?php if ($Print['Jabatan'] == "CEO (Chief Executive Officer)") : ?>
-              Rp <?= $CEO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCeo['tunjanganJabatan']; ?>
             <?php elseif ($Print['Jabatan'] == "CTO (Chief Technology Officer)") : ?>
-              Rp <?= $CTO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCTO['tunjanganJabatan']; ?>
             <?php elseif ($Print['Jabatan'] == "CMO (Chief Marketing Officer)") : ?>
-              Rp <?= $CMO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCMO['tunjanganJabatan']; ?>
             <?php elseif ($Print['Jabatan'] == "COO (Chief Operating Officer)") : ?>
-              Rp <?= $COO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCOO['tunjanganJabatan']; ?>
             <?php elseif ($Print['Jabatan'] == "CFO (Chief Financial Officer)") : ?>
-              Rp <?= $CFO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCFO['tunjanganJabatan']; ?>
             <?php elseif ($Print['Jabatan'] == "Sales Manager") : ?>
-              Rp <?= $Sales; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiSales['tunjanganJabatan']; ?>
             <?php endif; ?>
           </li>
         </ul>
@@ -251,17 +235,17 @@ $PSales = $Sales * 10 / 100;
           </li>
           <li>
             <?php if ($Print['Jabatan'] == "CEO (Chief Executive Officer)") : ?>
-              Rp <?= $PCEO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCeo['pajak']; ?>
             <?php elseif ($Print['Jabatan'] == "CTO (Chief Technology Officer)") : ?>
-              Rp <?= $PCTO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCTO['pajak']; ?>
             <?php elseif ($Print['Jabatan'] == "CMO (Chief Marketing Officer)") : ?>
-              Rp <?= $PCMO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCMO['pajak']; ?>
             <?php elseif ($Print['Jabatan'] == "COO (Chief Operating Officer)") : ?>
-              Rp <?= $PCOO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCOO['pajak']; ?>
             <?php elseif ($Print['Jabatan'] == "CFO (Chief Financial Officer)") : ?>
-              Rp <?= $PCFO; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiCFO['pajak']; ?>
             <?php elseif ($Print['Jabatan'] == "Sales Manager") : ?>
-              Rp <?= $PSales; ?>
+              Rp <?= $gajiKaryawan['gajipokok']  *  $gajiSales['pajak']; ?>
             <?php endif; ?>
           </li>
         </ul>
@@ -274,17 +258,17 @@ $PSales = $Sales * 10 / 100;
           </li>
           <li style="letter-spacing:1px;">
             <?php if ($Print['Jabatan'] == "CEO (Chief Executive Officer)") : ?>
-              Rp <?= $Pokok + $CEO - $PCEO; ?>
+              Rp <?= ($gajiKaryawan['gajipokok'] * $gajiCeo['tunjanganJabatan'] + $gajiKaryawan['gajipokok']) - ($gajiKaryawan['gajipokok'] * $gajiCeo['pajak'])  ?>
             <?php elseif ($Print['Jabatan'] == "CTO (Chief Technology Officer)") : ?>
-              Rp <?= $Pokok + $CTO - $PCTO; ?>
+              Rp <?= ($gajiKaryawan['gajipokok'] * $gajiCTO['tunjanganJabatan'] + $gajiKaryawan['gajipokok']) - ($gajiKaryawan['gajipokok'] * $gajiCTO['pajak'])  ?>
             <?php elseif ($Print['Jabatan'] == "CMO (Chief Marketing Officer)") : ?>
-              Rp <?= $Pokok + $CMO - $PCMO; ?>
+              Rp <?= ($gajiKaryawan['gajipokok'] * $gajiCMO['tunjanganJabatan'] + $gajiKaryawan['gajipokok']) - ($gajiKaryawan['gajipokok'] * $gajiCMO['pajak'])  ?>
             <?php elseif ($Print['Jabatan'] == "COO (Chief Operating Officer)") : ?>
-              Rp <?= $Pokok + $COO - $PCOO; ?>
+              Rp <?= ($gajiKaryawan['gajipokok'] * $gajiCOO['tunjanganJabatan'] + $gajiKaryawan['gajipokok']) - ($gajiKaryawan['gajipokok'] * $gajiCOO['pajak'])  ?>
             <?php elseif ($Print['Jabatan'] == "CFO (Chief Financial Officer)") : ?>
-              Rp <?= $Pokok + $CFO - $PCFO; ?>
+              Rp <?= ($gajiKaryawan['gajipokok'] * $gajiCFO['tunjanganJabatan'] + $gajiKaryawan['gajipokok']) - ($gajiKaryawan['gajipokok'] * $gajiCFO['pajak'])  ?>
             <?php elseif ($Print['Jabatan'] == "Sales Manager") : ?>
-              Rp <?= $Pokok + $Sales - $PSales; ?>
+              Rp <?= ($gajiKaryawan['gajipokok'] * $gajiSales['tunjanganJabatan'] + $gajiKaryawan['gajipokok']) - ($gajiKaryawan['gajipokok'] * $gajiSales['pajak'])  ?>
             <?php endif; ?>
           </li>
         </ul>

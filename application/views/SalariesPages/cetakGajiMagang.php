@@ -1,8 +1,3 @@
-<?php
-$Pokok = 3000000;
-$Pajak = $Pokok * 10 / 100;
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,7 +63,7 @@ $Pajak = $Pokok * 10 / 100;
       width: 200px;
       border: 4px solid white;
       height: 200px;
-      background-image: url('<?= site_url('assets/img/gambarMagang/').$Print['Gambar']; ?>');
+      background-image: url('<?= site_url('assets/img/gambarMagang/') . $Print['Gambar']; ?>');
       background-repeat: none;
       background-size: cover;
       background-color: White;
@@ -208,7 +203,7 @@ $Pajak = $Pokok * 10 / 100;
             <h3>Gaji Pokok</h3>
           </li>
           <li>
-            Rp <?= $Pokok; ?>
+            Rp <?= $gajiMagang['gajipokok']; ?>
           </li>
         </ul>
       </div>
@@ -218,7 +213,7 @@ $Pajak = $Pokok * 10 / 100;
             <h3>Pajak</h3>
           </li>
           <li>
-            Rp <?= $Pajak; ?>
+            Rp <?= $gajiMagang['gajipokok'] * $gajiMagang['pajak']; ?>
           </li>
         </ul>
       </div>
@@ -229,7 +224,7 @@ $Pajak = $Pokok * 10 / 100;
             <h3>Total Gaji</h3>
           </li>
           <li style="letter-spacing:1px;">
-            Rp <?= $Pokok - $Pajak; ?>
+            Rp <?= $gajiMagang['gajipokok'] - ($gajiMagang['gajipokok'] * $gajiMagang['pajak']); ?>
           </li>
         </ul>
       </div>

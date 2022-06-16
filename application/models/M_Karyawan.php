@@ -203,4 +203,12 @@ class M_Karyawan extends CI_Model
   {
     return $this->db->get_where('karyawan_magang', array('Id' => $Id))->row_array();
   }
+  public function getSalariesEmployees()
+  {
+    return $this->db->get('datagajikaryawan')->row_array();
+  }
+  public function getSalariesInternships()
+  {
+    return $this->db->get('datagajimagang')->row_array();
+  }
 }
