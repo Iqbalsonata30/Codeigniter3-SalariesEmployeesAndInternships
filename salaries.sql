@@ -1,7 +1,45 @@
 ﻿# Host: localhost  (Version 5.5.5-10.4.22-MariaDB)
-# Date: 2022-06-10 22:39:07
+# Date: 2022-06-16 09:40:41
 # Generator: MySQL-Front 6.0  (Build 2.20)
 
+
+#
+# Structure for table "datagajikaryawan"
+#
+
+DROP TABLE IF EXISTS `datagajikaryawan`;
+CREATE TABLE `datagajikaryawan` (
+  `id_gaji` int(11) NOT NULL AUTO_INCREMENT,
+  `jabatan` varchar(255) DEFAULT NULL,
+  `gajipokok` varchar(255) DEFAULT NULL,
+  `pajak` varchar(255) DEFAULT NULL,
+  `tunjanganJabatan` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_gaji`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4;
+
+#
+# Data for table "datagajikaryawan"
+#
+
+INSERT INTO `datagajikaryawan` VALUES (1,'CEO (Chief Executive Officer)','5000000','0.15','0.45'),(2,'CMO (Chief Marketing Officer)','5000000','0.15','0.40'),(3,'CTO (Chief Technology Officer)','5000000','0.15','0.35'),(4,'CFO (Chief Financial Officer)','5000000','0.15','0.30'),(5,'COO (Chief Operating Officer)','5000000','0.15','0.25'),(7,'Sales Manager','5000000','0.15','0.20');
+
+#
+# Structure for table "datagajimagang"
+#
+
+DROP TABLE IF EXISTS `datagajimagang`;
+CREATE TABLE `datagajimagang` (
+  `id_gaji` int(11) NOT NULL,
+  `gajipokok` varchar(255) DEFAULT NULL,
+  `pajak` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id_gaji`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+#
+# Data for table "datagajimagang"
+#
+
+INSERT INTO `datagajimagang` VALUES (1,'3000000','0.10');
 
 #
 # Structure for table "karyawan"
@@ -17,7 +55,7 @@ CREATE TABLE `karyawan` (
   `Alamat` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `id_Karyawan` (`id_Karyawan`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4;
 
 #
 # Data for table "karyawan"
@@ -40,7 +78,7 @@ CREATE TABLE `karyawan_magang` (
   `Gambar` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`Id`),
   KEY `ID_Magang` (`ID_Magang`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
 
 #
 # Data for table "karyawan_magang"
@@ -64,10 +102,10 @@ CREATE TABLE `user` (
   `is_active` int(11) DEFAULT NULL,
   `date_created` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_user`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 
 #
 # Data for table "user"
 #
 
-INSERT INTO `user` VALUES (2,'admin','admin','default.svg','$2y$10$0OoG5iMBPtzZia92Mg48Y.CaF4e4DmuJCt.UaJtFcpzxCxcBS3XP.','$2y$10$J0YcCszsRHBOeiC13.rj5uwHSB1n24H/N4TSqJp9S/0GHi96Ol/Bi',1,1,'1654873514'),(3,'raga','Raga Setia Wibawa','default.svg','$2y$10$dMORwn.z62C4Cdst0wP41.4Box5cW0O9WDIYLB9EZGFT53rLDLZny','$2y$10$pcfWkLor.N8F4c2x3fhfA.NaEfA0Hh.y8F1fNsWhHLvd2l6HTqKW2',2,1,'1654873514'),(4,'iqbalsonata','Iqbal Sonata','default.svg','$2y$10$qG3JTv4vcNhzCsjS0eGr4.eL0RQgsNDpwmw08O.nE6FHLBeHdNYiy','$2y$10$OAzXHMjBO8l5pHNbqCT29OU1saE1xj4Wy.2.7qGm/KWERLYJg0Pmy',2,1,'1654874081'),(5,'shelly','Shelly Sagita','default.svg','$2y$10$nk8Mw/1OWXAaHJBHk3IC4.POZ/XijKOAMuQWkQGnn974lfm77bFJi','$2y$10$Wy9NQBtmmWvQYyAfgD60Oe1A0fG/yKy0CVgdp4fUNxwc7hqPvgPLu',3,1,'1654874090');
+INSERT INTO `user` VALUES (2,'admin','admin','default.svg','$2y$10$MprQc5u2IKmiWn8TDPjuRukRqC4UfN7VajlvGS9qVQ2TbJmv2kgjK','$2y$10$J0YcCszsRHBOeiC13.rj5uwHSB1n24H/N4TSqJp9S/0GHi96Ol/Bi',1,1,'1654873514'),(3,'raga','Raga Setia Wibawa','default.svg','$2y$10$dMORwn.z62C4Cdst0wP41.4Box5cW0O9WDIYLB9EZGFT53rLDLZny','$2y$10$pcfWkLor.N8F4c2x3fhfA.NaEfA0Hh.y8F1fNsWhHLvd2l6HTqKW2',2,1,'1654873514'),(4,'iqbalsonata','Iqbal Sonata','default.svg','$2y$10$qG3JTv4vcNhzCsjS0eGr4.eL0RQgsNDpwmw08O.nE6FHLBeHdNYiy','$2y$10$OAzXHMjBO8l5pHNbqCT29OU1saE1xj4Wy.2.7qGm/KWERLYJg0Pmy',2,1,'1654874081'),(5,'shelly','Shelly Sagita','default.svg','$2y$10$nk8Mw/1OWXAaHJBHk3IC4.POZ/XijKOAMuQWkQGnn974lfm77bFJi','$2y$10$Wy9NQBtmmWvQYyAfgD60Oe1A0fG/yKy0CVgdp4fUNxwc7hqPvgPLu',3,1,'1654874090'),(6,'rahmad','Rahmad Hidayat','default.svg','$2y$10$0b4sz1ZSihuuwO7.fkV..uMft8ZXL1yIJo1Chp6kJ4utbUggHMtWa','$2y$10$Do/UqpehkbEDyM78QOcVwe6rqV6xx/Gg0rW2D9apoAjYJX6xgStpS',3,1,'1655175828'),(7,'fery','Fery Richardo','default.svg','$2y$10$Qk2Vx2ww/E68SvRNV4HYPuXDqT1iX0PBkXGol/xbWO15tZ1j4.Th.','$2y$10$gIm0TWOMU0dM4lPgsTB26OOc.UbHr1HUGnecUPFvJaErAR5xgi88u',2,1,'1655175910');
