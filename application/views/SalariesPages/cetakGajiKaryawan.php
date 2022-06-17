@@ -6,7 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sand-Box - Cetak Gaji Karyawan</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
 
@@ -53,21 +52,10 @@
     }
 
     .second {
-      display: flex;
-      flex-direction: row;
+      text-align: center;
+      font-family: 'Roboto slab', cursive;
       color: black;
       font-size: 1.2em;
-    }
-
-    .gambar {
-      width: 200px;
-      border: 4px solid white;
-      height: 200px;
-      background-image: url('<?= site_url('assets/img/profile/default.svg'); ?>');
-      background-repeat: none;
-      background-size: cover;
-      background-color: White;
-      border-radius: 100%;
     }
 
     .jumbotron {
@@ -79,15 +67,13 @@
     }
 
     .data {
+      text-align: center;
       padding: 0 10px;
       background-color: White;
       font-size: 16px;
-      display: flex;
-      flex-direction: row;
     }
 
     .data>ul {
-      padding-top: 10px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -95,9 +81,9 @@
     }
 
     .data>ul>li {
+      margin-left: 50px;
       width: 250px;
       list-style: none;
-      padding: 0 10px;
       margin: 0 10px;
       text-indent: 1em;
       text-align: left;
@@ -105,13 +91,12 @@
 
     .divider {
       text-indent: 1em;
-      padding-top: 5px;
       text-align: left;
-      margin: 0 10px;
+      margin: 0;
     }
 
     footer {
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
       width: 66%;
@@ -119,14 +104,16 @@
       background-color: pink;
       margin: auto;
       height: 100px;
-      padding-top: 20px;
+      margin-top: 100px;
       border-top: 5px solid rgb(0, 0, 0, 0.7);
       box-shadow: 0 5px 15px rgb(0, 0, 0, 0.7);
       z-index: -1;
     }
 
     .footer {
+      text-align: center;
       color: black;
+      padding: 25px;
       font-size: 18px;
     }
   </style>
@@ -137,8 +124,6 @@
     <div class="wrapper">
       <h2 class="title">Sand-Box</h2>
       <h3 class="second">Kartu Gaji Karyawan</h3>
-      <div class="gambar">
-      </div>
     </div>
     <section class="jumbotron">
       <div class="divider">
@@ -274,10 +259,8 @@
         </ul>
       </div>
     </section>
-
     <footer class="  animate__animated animate__jello">
-      <div>
-        <span class="footer">Copyright &copy; Iqbal Sonata <?= date('Y', $user['date_created']); ?></span>
+      <div class="footer">Copyright &copy; Iqbal Sonata <?= date('Y', $user['date_created']); ?>
       </div>
     </footer>
   </div>

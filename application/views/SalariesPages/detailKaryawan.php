@@ -20,10 +20,9 @@
             </tr>
           </thead>
           <tbody>
-            <?php $i = 1; ?>
             <?php foreach ($Detail as $J) : ?>
               <tr style="color:Black;">
-                <td><?= $i++; ?></td>
+                <td><?= ++$start; ?></td>
                 <td><Strong><?= $J['id_Karyawan']; ?><strong></td>
                 <td><?= $J['Nama']; ?></td>
                 <td><?= $J['Jabatan']; ?> Hari</td>
@@ -47,6 +46,7 @@
             <?php endforeach; ?>
           </tbody>
         </table>
+        <?= $this->pagination->create_links(); ?>
       </div>
     </div>
   </div>

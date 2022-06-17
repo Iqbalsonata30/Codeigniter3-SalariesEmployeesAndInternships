@@ -67,7 +67,6 @@
             </tr>
           </thead>
           <tbody>
-            <?php $i = 1; ?>
             <?php foreach ($Karyawan as $k) : ?>
               <tr>
                 <th><?= ++$start ?></th>

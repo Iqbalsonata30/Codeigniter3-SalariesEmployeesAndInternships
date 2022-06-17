@@ -35,13 +35,12 @@
       height: 100px;
       margin-top: 20px;
       padding-top: 20px;
-      border-bottom: 5px solid rgb(0, 0, 0, 0.7);
       box-shadow: 0 5px 15px rgb(0, 0, 0, 0.7);
       ;
     }
 
     .title {
-      color: Azure;
+      color: rgba(220, 20, 60, 0.9);
       text-align: center;
       text-transform: UPPERCASE;
       background-color: lightblue;
@@ -53,21 +52,11 @@
     }
 
     .second {
-      display: flex;
-      flex-direction: row;
-      color: black;
+      text-align: center;
+      font-family: Arial;
+      color: rgba(220, 20, 60, 0.7);
+      box-shadow: 0 2px 5px shadow;
       font-size: 1.2em;
-    }
-
-    .gambar {
-      width: 200px;
-      border: 4px solid white;
-      height: 200px;
-      background-image: url('<?= site_url('assets/img/gambarMagang/') . $Print['Gambar']; ?>');
-      background-repeat: none;
-      background-size: cover;
-      background-color: White;
-      border-radius: 100%;
     }
 
     .jumbotron {
@@ -79,15 +68,13 @@
     }
 
     .data {
+      text-align: center;
       padding: 0 10px;
       background-color: White;
       font-size: 16px;
-      display: flex;
-      flex-direction: row;
     }
 
     .data>ul {
-      padding-top: 10px;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -95,9 +82,9 @@
     }
 
     .data>ul>li {
+      margin-left: 50px;
       width: 250px;
       list-style: none;
-      padding: 0 10px;
       margin: 0 10px;
       text-indent: 1em;
       text-align: left;
@@ -105,13 +92,12 @@
 
     .divider {
       text-indent: 1em;
-      padding-top: 5px;
       text-align: left;
-      margin: 0 10px;
+      margin: 0;
     }
 
     footer {
-      display: flex;
+      display: block;
       justify-content: center;
       align-items: center;
       width: 66%;
@@ -119,14 +105,16 @@
       background-color: lightblue;
       margin: auto;
       height: 100px;
-      padding-top: 20px;
+      margin-top: 40px;
       border-top: 5px solid rgb(0, 0, 0, 0.7);
       box-shadow: 0 5px 15px rgb(0, 0, 0, 0.7);
       z-index: -1;
     }
 
     .footer {
+      text-align: center;
       color: black;
+      padding: 25px;
       font-size: 18px;
     }
   </style>
@@ -231,9 +219,8 @@
     </section>
 
     <footer class="  animate__animated animate__jello">
-      <div>
-        <span class="footer">Copyright &copy; Iqbal Sonata <?= date('Y', $user['date_created']); ?></span>
-      </div>
+      <div class="footer">
+        Copyright &copy; Iqbal Sonata <?= date('Y', $user['date_created']); ?> </div>
     </footer>
   </div>
 </body>
